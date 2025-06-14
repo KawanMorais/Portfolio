@@ -1,0 +1,437 @@
+* {
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* padrao  */
+    /* background-color: #1F232D; */
+    background-color: #000000;
+    /* background-color: #1A1A1A; */
+    /* background-image: url("../image/Background.jpg"); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    padding-top: 80px;
+    /* animation: colors 15s ease infinite; */
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Início da animação: totalmente transparente */
+    }
+    to {
+        opacity: 1; /* Fim da animação: totalmente visível */
+    }
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #1F232D; */
+    background-color: #1A1A1A;
+    font-weight: 700;
+    color: white;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    
+}
+main{  
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #1F232D; */
+    /* background-color: #000000; */
+    font-weight: 700;
+    color: white;
+    padding: 20px 20px;
+    
+}
+
+h1.logo{
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 100px;
+
+}
+
+h1.logo.animacao{
+    animation: animacaoParaDireita 1s ease-out forwards;
+}
+
+@keyframes animacaoParaDireita {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        opacity: 0.5;
+       
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h1.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .navbar {
+    /* border: 1px solid white; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    align-items: center;  
+}
+
+
+@keyframes animacaoParaCima {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    50%{
+        opacity: 0.5;
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animacaoParabaixo {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    50%{
+        opacity: 0.5;
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animacaoParaEsquerda {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50%{
+        opacity: 0.5;
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animacaoAparecer {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.foto-perfil.animacao {
+    animation: animacaoParabaixo 1s ease-out forwards;
+}
+
+.botao-inicio-apresentacao.animacao{
+    animation: animacaoAparecer 1s ease-out forwards;
+}
+
+.redes-sociais-items.animacao{
+    animation: animacaoParaCima 1s ease-out forwards;
+}
+
+.apresentacaoPrimeiroTexto.animacao{
+     animation: animacaoParaEsquerda 1s ease-out forwards;
+}
+
+.meuNome.animacao{
+     animation: animacaoParaDireita 1s ease-out forwards;
+}
+
+.profissao.animacao{
+     animation: animacaoParaEsquerda 1s ease-out forwards;
+}
+
+.nav-item.animacao{
+    animation: animacaoParaCima 1s ease-out forwards;
+}
+
+.nav-item a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-item a:hover {
+    color: #03EBFF;
+}
+
+.inicio {
+    /* border: 1px solid rgb(255, 255, 255); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.inicio h2{
+    margin: 0px;
+    font-size: 1.5em;
+}
+
+.inicio h1{
+    font-size: 3em;
+    margin: 10px;
+    margin-left: 3px;
+}
+
+.foto-perfil {
+    /* border: 1px solid red; */
+    margin-left: 50px;
+}
+
+.foto-perfil img{
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 0px 500px rgb(0, 201, 228);
+    
+}
+
+.texto-inicio{
+    width: 900px;
+    /* border: 1px solid blue; */
+    font-size: 20px;
+}
+
+.texto-inicio h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.texto-inicio h1{
+    font-size: 56px;
+    font-weight: 700;
+    
+}
+
+/* Animação digitação barrinha */
+.profissao-destaque::after {
+    content: '|';
+    color: white;
+    margin-left: 1px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline-block;
+    transform: translateY(-2px);
+    animation: piscar 1s steps(1) infinite;
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* */
+
+.profissao-destaque {
+    color: #03EBFF;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociais a img{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.redes-sociais a img:hover {
+    transform: scale(1.1);
+}
+
+.botao-inicio-apresentacao {
+    /* border: 1px solid pink; */
+    margin-top: 30px;
+    margin-left: -5px;
+
+}
+.botao-inicio-apresentacao button{
+    background-color: #04c5d6;
+    /* background-color: #000000; */
+    width: 160px;
+    height: 50px;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    box-shadow: 0px 0px 8px rgb(0, 201, 228);
+    transition: transform 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.botao-inicio-apresentacao button:hover {
+    transform: scale(1.05);
+    background-color: #03EBFF;
+}
+
+.botao-inicio-apresentacao button a{
+    text-decoration: none;
+    /* color: white; */
+    color: #000000;
+}
+
+.botao-inicio-apresentacao button a:hover {
+    color: #000000;
+}   
+
+main.center-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.formulario input,
+.formulario textarea {
+    
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 1em;
+  
+}
+
+.botao-contato{
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  width: 150px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.botao-contato:hover {
+    background-color: #03EBFF;
+    color: black;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.center h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.center p {
+    text-align: left;
+}
+
+.center-about {
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    font-size: 2em;
+}
+
+main.center-formacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 0;
+    margin-left: 0;
+
+}
+
+
