@@ -14,16 +14,15 @@
         <h1 class="logo"><a href="index.html">Portfólio</a></h1>
         <nav>
             <ul class="navbar">
-                <li class="nav-item"><a href="index.html">Início</a></li>
-                <li class="nav-item"><a href="SobreMim.html">Sobre Mim</a></li>
-                <li class="nav-item"><a href="Formacao.html">Formação</a></li>
-                <li class="nav-item"><a href="Portfolio.html">Portfólio</a></li>
-                <li class="nav-item"><a href="Contatos.html">Contatos</a></li>
+                <li class="nav-item"><a href="#inicio">Início</a></li>
+                <li class="nav-item"><a href="#sobre-mim">Sobre Mim</a></li>
+                <li class="nav-item"><a href="#meus-projetos">Projetos</a></li>
+                <li class="nav-item"><a href="#contato">contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="inicio">
+        <section id="inicio" class="inicio">
             <div class="texto-inicio">
                 <h2 class="apresentacaoPrimeiroTexto">Olá, meu nome é</h2>
                 <h1 class="meuNome">Kawan Morais</h1>
@@ -81,7 +80,7 @@
                 </div>
             </div>
         </section>
-        <section class="meus-projetos">
+        <section id="meus-projetos" class="meus-projetos">
             <div class="meus-projetos-container">
                 <div class="meus-projetos-titulo">
                     <h2>Meus <span class="ciano">Projetos</span></h2>
@@ -129,13 +128,57 @@
                                 <a href="#" target="_blank">Ver Projeto</a>
                                 <a href="#" target="_blank">Código</a>
                             </div>
-                            
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="contato-container">
+                <div class="contato-titulo">
+                    <h2>Entre em <span class="ciano">Contato</span></h2>
+                    <p class="contato-subtitulo">Tem um projeto em mente? Vamos conversar e transformar suas ideias em realidade!</p>
+
+                </div>
+                <div class="contato-conteudo">
+                    
+                    <div class="contato-informacoes">
+                        <h3>Informações de Contato</h3>
+
+                        <div class="contato-detalhes">
+                            <p><strong>Email:</strong> kawanmorait@gmail.com</p>
+                            <p><strong>Celular:</strong> +55 (21) 981962173</p>
+                            <p><strong>Localização:</strong> Rio de Janeiro, Brasil</p>
+                        </div>
+                    </div>
+
+                    <div class="contato-formulario">
+                        <form action="#" method="post">
+
+                            <div class="formulario-celula">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            </div>
+
+                            <div class="formulario-celula">
+                                <label for="nome">Email</label>
+                                <input type="text" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+
+                             <div class="formulario-celula">
+                                <label for="nome">Mensagem</label>
+                                <textarea name="mensagem" id="mensagem" rows="6" placeholder="Sua mensagem..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="formulario-botao-enviar">Enviar Mensagem</button>
+
+
+                        </form>
 
                     </div>
 
                 </div>
-
             </div>
 
         </section>

@@ -702,6 +702,131 @@ section.meus-projetos {
 
 }
 
+section.contato {
+    background-color: #0e1216;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  100px 250px;
+    margin-top: 120px;
+}
+
+.contato-container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato-titulo h2{
+    font-size: 48px;
+    margin-bottom: 30px ;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contato-titulo h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #00e1ff;
+    border-radius: 2px;
+    
+}
+
+.contato-subtitulo {
+    font-size: 20px;
+    color: #afb4b9;
+    margin-bottom: 60px;
+}
+
+.contato-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    text-align: left;
+}
+
+.contato-informacoes{
+   flex: 1;
+   padding: 30px 0;
+}
+
+.contato-informacoes h3 {
+    font-size: 28px;
+    color: #d8dadb;
+    margin-bottom: 25px;
+}
+
+.contato-detalhes p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #afb4b9;
+    margin-bottom: 10px;
+}
+
+.contato-formulario{
+    flex: 1.5;
+}
+
+.formulario-celula {
+    margin-bottom: 25px;
+}
+
+.formulario-celula label{
+    display: block;
+    font-size: 16px;
+    color: #d8dadb;
+    margin-bottom: 8px;
+}
+
+.formulario-celula input,
+.formulario-celula textarea{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 225, 255, 0.2);
+    border-radius: 8px;
+    background-color: #0d0f13;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.formulario-celula input:focus,
+.formulario-celula textarea:focus {
+    border-color: #00e1ff ;
+}
+
+.formulario-celula textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.formulario-botao-enviar {
+    background-color: #00e1ff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 225, 255, 0.3);
+    transition: backgound-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.formulario-botao-enviar:hover {
+    background-color: #2ae9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 225, 255, 0.2);
+}
+
 .ciano{
     color: #00e1ff;
 }

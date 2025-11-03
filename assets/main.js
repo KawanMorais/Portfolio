@@ -158,22 +158,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', manipularRolagemHeader);
 
     
-        const seta = document.querySelector('.seta-baixo-scroll');
+        const linksDeRolagem = document.querySelectorAll('.seta-baixo-scroll, .nav-item a');
         const alturaDoHeader = 80;
 
-        if (seta) {
-            seta.addEventListener('click', function(event){
-                event.preventDefault();
+        linksDeRolagem.forEach(link => {
+            if (link.getAttribute('href') && link.getAttribute('href').startsWith('#') && link.getAttribute('href').length > 1) {
 
-                const idAlvo = this.getAttribute('href');
-                const elementoAlvo = document.querySelector(idAlvo);
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
 
-                if (elementoAlvo) {
-                    window.scrollTo({
-                        top: elementoAlvo.offsetTop - alturaDoHeader,
-                        behavior: 'smooth'
-                    })
-                }
-            })
-        }
+                    const idAlvo = this.getAttribute('href');
+                    const elementoAlvo = document.querySelector(idAlvo);
+
+                    if (elementoAlvo) {
+                        window.scrollTo({
+                            top: elementoAlvo.offsetTop - alturaDoHeader,
+                            behavior: 'smooth'
+                        })
+                    }
+                });
+            }
+        });
 });
