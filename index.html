@@ -12,7 +12,20 @@
 <body>
     <header>
         <h1 class="logo"><a href="index.html">Portfólio</a></h1>
-        <nav>
+
+        <div id="navbar-mobile">
+        <svg class="barrinhas-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="fechar-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        </div>
+
+        <nav id="nav-desktop">
             <ul class="navbar">
                 <li class="nav-item"><a href="#inicio">Início</a></li>
                 <li class="nav-item"><a href="#sobre-mim">Sobre Mim</a></li>
@@ -36,7 +49,7 @@
             </div>
             <div class="foto-perfil"><img src="image/FotoDePerfil.png" alt=""></div>
             
-            <a href="#sobre-mim" class="seta-baixo-scroll">
+            <a href="#sobre-mim" class="seta-baixo-scroll" id="seta-baixo-scroll">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </a>
 
@@ -48,7 +61,7 @@
 
                      <div class="sobre-mim-imagem"> <img src="image/ImagemSobreMim.jpeg" alt="ImagemComputadorSobreMim"></div>
 
-                    <div class="sobre-mim-texto"><p>Me chamo Kawan Morais, tenho 22 anos e atualmente estou me aprofundando em C#, com foco na especialização em desenvolvimento back-end. Antes de iniciar meus estudos na área de tecnologia, dedicava-me à preparação para concursos militares, tendo sido aprovado em um deles (na EEAR). Apesar da minha aprovação, a reprovação no exame médico devido à miopia me impediu de seguir essa carreira. Foi então que decidi explorar o mundo tecnológico, que já me atraía desde jovem e onde encontrei minha verdadeira paixão. Atualmente, sou estudante do 3º período de Engenharia de Software na UNINTER e busco uma oportunidade de estágio na área de tecnologia, onde poderei aplicar meus conhecimentos e continuar aprendendo.</p>
+                    <div class="sobre-mim-texto"><p>Me chamo Kawan Morais, tenho 22 anos e atualmente estou me aprofundando em C#, com foco na especialização em desenvolvimento back-end. Antes de iniciar meus estudos na área de tecnologia, dedicava-me à preparação para concursos militares, tendo sido aprovado em dois deles (EEAR e CBMERJ). Apesar das minhas aprovações, a reprovação nos exames médicos devido à miopia me impediram de seguir essa carreira. Foi então que decidi explorar o mundo tecnológico, que já me atraía desde jovem e onde encontrei minha verdadeira paixão. Atualmente, sou estudante do 3º período de Engenharia de Software e busco aplicar meus conhecimentos e continuar aprendendo.</p>
                     <div class="tecnologias-container">
                         <div class="tecnologia" title="C#">
                             <img src="image/CS.svg" alt="C# Logo">
@@ -150,6 +163,12 @@
                             <p><strong>Email:</strong> kawanmorait@gmail.com</p>
                             <p><strong>Celular:</strong> +55 (21) 981962173</p>
                             <p><strong>Localização:</strong> Rio de Janeiro, Brasil</p>
+
+                            <div class="redes-sociais-contato">
+                                <a  class="redes-sociais-items-contato" href="https://www.linkedin.com/in/kawanmorais/" target="_blank"><img src="image/linkedin.png" alt="Linkedin"></a>
+                                <a  class="redes-sociais-items-contato" href="https://github.com/KawanMorais" target="_blank"><img src="image/github.png" alt="GitHub"></a>
+                                <a class="redes-sociais-items-contato" href="https://www.instagram.com/kawanmorais12/?next=%2F&hl=en" target="_blank"><img  src="image/instagram.png" alt="Instagram"></a>
+                            </div>
                         </div>
                     </div>
 

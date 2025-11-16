@@ -9,16 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* padrao  */
-    /* background-color: #1F232D; */
     background-color: #000000;
-    /* background-color: #1A1A1A; */
-    /* background-image: url("../image/Background.jpg"); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
     padding-top: 80px;
-    /* animation: colors 15s ease infinite; */
     animation: fadeIn 1s ease;
 }
 
@@ -77,8 +69,6 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-color: #1F232D; */
-    /* background-color: #000000; */
     font-weight: 700;
     color: white;
     padding: 20px 20px;
@@ -259,7 +249,6 @@ nav .navbar {
 
 .inicio h2{
     margin: 0px;
-    font-size: 1.5em;
 }
 
 .inicio h1{
@@ -360,8 +349,8 @@ nav .navbar {
     outline: none;
     font-weight: 700;
     box-shadow: 0px 0px 8px rgb(0, 201, 228);
-    transition: transform 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .botao-inicio-apresentacao button:hover {
@@ -585,7 +574,7 @@ section.meus-projetos {
 }
 
 .meus-projetos-titulo h2{
-    font-size: 3em;
+    font-size: 48px;
     position: relative;
     text-align: center;
     padding-bottom: 10px;
@@ -662,7 +651,7 @@ section.meus-projetos {
 }
 
 .texto-projeto {
-    padding: 1.5em;
+    padding: 16px;
     color: #afb4b9;
 }
 
@@ -769,6 +758,17 @@ section.contato {
     margin-bottom: 10px;
 }
 
+.redes-sociais-contato {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociais-contato a img{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+}
+
 .contato-formulario{
     flex: 1.5;
 }
@@ -831,4 +831,359 @@ section.contato {
     color: #00e1ff;
 }
 
+.navbar-mobile {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 110;
+}
 
+.navbar-mobile .bar{
+    width: 30px;
+    height: 3px;
+    background-color: #00e1ff;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+.navbar-mobile.open .bar:nth-child(1) {
+
+    transform: rotate(-45deg) translate(-7px, 7px);
+
+}
+
+.navbar-mobile.open .bar:nth-child(2) { 
+    opacity: 0;
+}
+
+.navbar-mobile.open .bar:nth-child(3) { 
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
+#navbar-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+#navbar-mobile .fechar-icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-top: 60px;
+        overflow-x: hidden;
+    }   
+
+    /* Seção Header e Nav */
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        padding: 15px 20px;
+    }
+
+    h1.logo {
+        margin-left: 0;           
+        margin-bottom: 0;         
+    }
+
+    #navbar-mobile{
+        display: block;
+        z-index: 101;
+        color: #00e1ff;
+    }
+
+    #nav-desktop {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%; 
+        max-width: none;
+        height: auto;
+        background-color: rgba(26, 26, 26, 1); 
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease-in-out;
+        z-index: 99;
+        
+        
+    }
+
+    #nav-desktop .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #nav-desktop .nav-item {
+        width: 100%;
+        margin: 0; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+
+    #nav-desktop .nav-item:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #nav-desktop .nav-item a {
+        display: block; /* Ocupa toda a largura do item */
+        padding: 15px;
+        color: white; 
+        text-decoration: none;
+        font-size: 1.1rem;
+        
+        
+    }
+
+    #nav-desktop.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0; 
+    }
+
+
+    #navbar-mobile.open .barrinhas-icon {
+        display: none;
+    }
+
+    #navbar-mobile.open .fechar-icon {
+        display: block;
+    }
+
+    #navbar-mobile:not(.open) .fechar-icon {
+        display: none;
+    }
+
+    #navbar-mobile:not(.open) .barrinhas-icon {
+        display: block;
+    }
+     
+    #nav-desktop .nav-item a:active {
+        background-color: #027281;
+    }
+
+    .nav-item.animacao {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    #navbar-mobile {
+        animation: animacaoParaEsquerda 1s ease-out forwards;
+    }
+
+    /* Seção Inicio */
+
+    .inicio {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 40px 20px 0px 20px;
+        justify-content: flex-start;
+        min-width: auto;
+    }
+
+    .foto-perfil {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 30px;
+
+        order: 1;
+    }
+
+    .foto-perfil img{
+        width: 180px;
+        height: 180px;
+        box-shadow: 0px 0px 200px rgb(0, 201, 228);
+    }
+
+    .texto-inicio {
+        width: 100%;
+        text-align: center;
+
+        order: 2;
+    }
+
+    .texto-inicio h2,
+    .texto-inicio h1 {
+        margin: 5px 0; 
+        margin-left: 0;
+    }
+
+    .texto-inicio h2 {
+        font-size: 20px; 
+    }
+
+    .texto-inicio h1 {
+        font-size: 35px; 
+    }
+
+    .redes-sociais {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .botao-inicio-apresentacao {
+        margin-left: 0; 
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .seta-baixo-scroll {
+        display: none; 
+    }       
+
+    /* Seção Sobre mim */
+
+    .sobre-mim-container {
+        padding: 60px 20px 60px 20px; 
+    }
+
+    .sobre-mim-titulo {
+        margin-bottom: 50px; 
+    }
+
+    .sobre-mim-titulo h2 {
+        margin: 0;
+        font-size: 35px;
+    }
+
+    .sobre-mim-conteudo {
+        flex-direction: column;
+        gap: 40px; 
+        align-items: center; 
+    }
+
+    .sobre-mim-imagem {
+        width: 100%;
+    }
+
+    .sobre-mim-imagem img {
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .sobre-mim-texto {
+        font-size: 16px;
+        max-width: 100%;
+        order: 2;
+    }
+
+    .tecnologias-container {
+        justify-content: center; 
+        margin-top: 40px;
+    }
+
+    /* Seção Meus Projetos */
+
+    .meus-projetos-container {
+        max-width: 1500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0px; 
+    }
+
+    .meus-projetos-titulo {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
+    .meus-projetos-titulo h2 {
+        font-size: 35px;
+    }
+
+    .meus-projetos-titulo p {
+        font-size: 18px; 
+        margin-top: 15px;
+    }
+
+    .meus-projetos-conteudo {
+        flex-wrap: nowrap; 
+        /* Permite a rolagem horizontal apenas se necessário */
+        overflow-x: auto; 
+        scrollbar-width: none;
+        gap: 20px; 
+        justify-content: start;
+        padding: 0; 
+        width: 100%;
+        height: auto; 
+        
+        /* Define o ponto de parada para que o card pare exatamente na tela */
+        scroll-snap-type: x mandatory;
+       
+    }
+
+    .meus-projetos-conteudo::-webkit-scrollbar {
+        display: none;
+    }
+
+    .projeto-card {
+        flex-shrink: 0; /* IMPEDE que o navegador tente diminuir o card */
+        flex-basis: calc(100vw - 40px);
+        /* Define o ponto de ancoragem para a rolagem parar */
+        scroll-snap-align: center; 
+        max-width: none; 
+        max-height: none;
+    }
+
+    .img-projeto img {
+        height: 180px; 
+    }
+
+    .texto-projeto {
+        padding: 15px; 
+    }
+
+    .texto-projeto p {
+        font-size: 18px;
+    }
+
+    .projeto-tags {
+        gap: 5px; 
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tag {
+        padding: 4px 8px; 
+        font-size: 12px;
+    }
+
+    .projeto-links {
+        gap: 15px; 
+    }
+
+    .projeto-links a {
+        font-size: 15px;
+    }
+
+    /* Seção Entre em Contato */
+
+    section.contato {
+        padding: 60px 20px;
+        margin-top: 60px; 
+    }
+
+    .contato-titulo h2 {
+        font-size: 35px;
+    }
+
+    .contato-subtitulo {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .contato-conteudo {
+        flex-direction: column;
+        gap: 40px; 
+    }
+}

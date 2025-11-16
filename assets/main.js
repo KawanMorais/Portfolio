@@ -3,10 +3,12 @@ const texto = document.getElementById("typewrite");
 
 function digitacao(elemento){
     let index = 0;
+    // Armazena o texto original completo que será animado
     const elementoOriginal = elemento.textContent.trim();
     elemento.textContent = "";
 
     function escrever(){
+
         if (index < elementoOriginal.length)
         {
             elemento.textContent += elementoOriginal.charAt(index);
@@ -14,16 +16,19 @@ function digitacao(elemento){
             setTimeout(escrever, 100)
         } else 
         {
+            // Se o texto estiver completo, espera 3000ms e chama a função de apagar
            setTimeout(apagar, 3000);
         }
     }
 
     function apagar() {
         if (elemento.textContent.length > 0) {
+            // Remove o último caractere do texto
             elemento.textContent = elemento.textContent.slice(0, -1);
             setTimeout(apagar, 50);
         } else 
         {
+            // Se o texto foi totalmente apagado, reseta o índice
             index = 0
             setTimeout(escrever, 1000)
         }
@@ -36,6 +41,7 @@ function digitacao(elemento){
 document.addEventListener('DOMContentLoaded', () => {
 
     const paginaAtual = window.location.pathname.split('/').pop().toLowerCase();
+    // Determina se a página atual é a página inicial (caminho vazio ou index.html)
     const paginaInicial = (paginaAtual === '' || paginaAtual === 'index.html');
     
     if (paginaInicial) {
@@ -136,6 +142,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2900);
         }
 
+        const mobileBarrinhas = document.getElementById('navbar-mobile')
+        
+        if (mobileBarrinhas) {
+            mobileBarrinhas.style.opacity = '0';
+
+            setTimeout(() => {
+                mobileIcon.classList.add('animacao'); 
+            }, 700); 
+        }
+
     }
     
     
@@ -155,9 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     manipularRolagemHeader();
 
-    window.addEventListener('scroll', manipularRolagemHeader);
+    window.addEventListener('scroll', manipularRolagemHeader); {
 
-    
         const linksDeRolagem = document.querySelectorAll('.seta-baixo-scroll, .nav-item a');
         const alturaDoHeader = 80;
 
@@ -179,4 +194,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-});
+    }
+
+    const mobileMenuIcon = document.getElementById('navbar-mobile');
+    const mobileMenu = document.getElementById('nav-desktop');
+    const navLinks = document.querySelectorAll('#nav-desktop .nav-item a');
+
+    function toggleMenu() {
+        mobileMenuIcon.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    }
+
+    if (mobileMenuIcon && mobileMenu) {
+        mobileMenuIcon.addEventListener('click', toggleMenu);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+        
+            if (mobileMenu.classList.contains('open')) {
+                toggleMenu(); 
+                
+            }
+        });
+    });
+
+}); 
